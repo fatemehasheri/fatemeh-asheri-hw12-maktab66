@@ -1,0 +1,15 @@
+.o-padding {
+  margin: 200px auto;
+  background-color: #eb71eb;
+  width: 50%;
+  height: 400px;
+}
+
+.c-padding {
+  width: 100%;
+  padding-top: 2%;
+  background-color: #f0f071;
+  height: 100px;
+}
+
+/*# sourceMappingURL=3.css.map */

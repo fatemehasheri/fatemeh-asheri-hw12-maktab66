@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./1.css">
+    <title>Document</title>
+</head>
+<body>
+  <div id="modal" class="modal hidden">
+    <div>
+      <button title="Close" class="close">Close</button>
+      <p>Your information was successfully registered!</p>
+    </div>
+  </div>
+  <div class="c-form">
+    <form action="#" method="">
+
+      <div class="box">
+        <div class="label">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="input">
+          <input type="text" id="fname" placeholder="Your name.." name="firstname"  required>
+        </div>
+      </div>
+
+      <div class="box">
+      <div class="label">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="input">
+          <input type="text" id="lname" placeholder="Your last name.." name="lastname"  required>
+      </div>      
+      </div>
+
+
+      <div class="box">
+        <div class="label">
+          <label for="country">Country</label>
+        </div>
+        <div class="input">
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="Iran">Iran</option>
+            <option value="china">china</option>
+            <option value="Spain">Spain</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="box">
+        <div class="label">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="input">
+          <textarea id="subject" placeholder="Write something.." name="subject"></textarea>
+        </div>
+      </div>
+
+      <div class="submit">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+  <script src="./1.js"></script>
+</body>
+</html>

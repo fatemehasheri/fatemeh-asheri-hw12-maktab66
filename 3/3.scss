@@ -1,0 +1,16 @@
+@mixin box($x, $y,$pseudo:false) {
+    width: 100%;
+    padding-top: calc($x / $y);
+}
+.o-padding{
+    margin: 200px auto;
+    background-color: rgb(235, 113, 235);
+    width: 50%;
+    height: 400px;
+}
+.c-padding{
+  @include box(200%,100,true );
+  background-color:rgb(240, 240, 113);
+  height: 100px;
+}
+

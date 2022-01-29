@@ -1,0 +1,131 @@
+*{
+  box-sizing: border-box;
+}
+
+$display: flex;
+$position-absolute: absolute;
+$margin-top: 5px;
+$bgray-color: #e0dedefb;
+$radius : 5px;
+
+@mixin display {
+  display: $display;
+  flex-direction: column;
+}
+@mixin margin {
+  margin-top: $margin-top;
+}
+
+@mixin style {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: $radius;
+  outline: 0;
+}
+
+body {
+  position: relative;
+} 
+
+.c-form{ 
+  margin: 50px 200px;
+  padding: 20px;
+  border-radius: $radius;
+  background-color: $bgray-color;
+  .box {
+    @include display();
+
+    .label {
+      @include margin();
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .input {
+      @include margin();
+    }
+  }
+
+  .submit {
+    @include margin();
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+input[type="text"]:invalid{
+  border: 1px solid red !important;
+}
+
+input[type="text"] {
+  @include style();
+}
+
+textarea{
+  @include style();
+  height: 150px
+
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: $radius;
+  cursor: pointer;
+}
+
+select {
+  @include style();
+}
+
+.modal {
+  top: -40px;
+  right: 185px;
+  left: -200px;
+  z-index: 999;
+  transition: all 0.3s;
+  position: $position-absolute; 
+}
+
+.modal > div {
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  background: rgb(230, 227, 227);
+  border-radius: $radius;
+  position: $position-absolute;
+}
+
+.close {
+  border: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  color: red;
+  width: 60px;
+  line-height: 30px;
+  border-radius: $radius;
+  position: $position-absolute;
+ 
+}
+
+.close:hover{
+  color: black;
+}
+.hidden{
+  display: none;
+}
+  
+@media (max-width: 559px) {
+  .input,.label,input[type="submit"] {
+    width: 100% !important;
+  }
+  .box {
+    @include display();
+  }
+}
+  
